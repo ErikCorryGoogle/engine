@@ -56,7 +56,7 @@ solutions = [
 ```
 
  * `cd engine` (Change to the directory in which you put the `.gclient` file.)
- * `gclient sync` This will fetch all the source code that Flutter depends on. Avoid interrupting this script, it can leave your repository in an inconsistent state that is tedious to clean up.
+ * `gclient sync` This will fetch all the source code that Flutter depends on. Avoid interrupting this script, it can leave your repository in an inconsistent state that is tedious to clean up. Note that this creates a directory named `src/flutter` under your `engine` directory. This directory is named `flutter`, but it contains the `engine` repo, not the `flutter` repo.
  * `cd src/flutter` (Change to the `flutter` directory of the `src` directory that `gclient sync` created in your `engine` directory.)
  * `git remote add upstream git@github.com:flutter/engine.git` (So that you fetch from the master `flutter/engine` repository, not your clone, when running `git fetch` et al.)
  * `cd ..` (Return to the `src` directory that `gclient sync` created in your `engine` directory.)
